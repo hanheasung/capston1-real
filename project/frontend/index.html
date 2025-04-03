@@ -1,0 +1,30 @@
+<body>
+    <div id="roleSelection">
+      <h2>당신의 역할을 선택하세요</h2>
+      <button onclick="selectRole('elderly')">노인</button>
+      <button onclick="selectRole('youth')">청년</button>
+    </div>
+  
+    <!-- ✅ 노인용 화면 -->
+    <div id="elderlySection" style="display:none;">
+      <h2>질문을 입력하세요</h2>
+      <input type="text" id="elderlyQuestionInput" placeholder="질문 입력" />
+      <button onclick="submitQuestion()">질문하기</button>
+  
+      <div id="answerArea" style="margin-top: 20px;"></div>
+  
+      <div style="margin-top: 10px;">
+        <button onclick="evaluateAnswer(true)">👍 좋아요</button>
+        <button onclick="evaluateAnswer(false)">👎 별로예요</button>
+      </div>
+    </div>
+  
+    <!-- ✅ 청년용 화면 -->
+    <div id="youthSection" style="display:none;">
+      <h2>답변 대기 중인 질문</h2>
+      <div id="pendingQuestions"></div>
+    </div>
+  
+    <script src="main.js"></script>
+  </body>
+  
