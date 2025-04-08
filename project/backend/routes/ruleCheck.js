@@ -4,6 +4,8 @@ import path from 'path';
 
 const router = express.Router();
 
+
+
 // 키워드 매칭 점수 계산 함수
 function calculateMatchScore(questionWords, ruleKeywords) {
     const normalizedQuestion = questionWords.map(word => word.toLowerCase());
@@ -61,3 +63,4 @@ router.post('/', async (req, res) => {
 });
 
 export default router;
+

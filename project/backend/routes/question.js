@@ -1,7 +1,7 @@
 import express from 'express';
 import { Question } from '../../database/models.js';
 import fs from 'fs/promises';
-
+const express = require("express");
 const router = express.Router();
 
 // 질문 저장
@@ -78,3 +78,6 @@ router.post('/:id/evaluate', async (req, res) => {
 });
 
 export default router;
+module.exports = router;
+
+
