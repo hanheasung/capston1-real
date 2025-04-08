@@ -20,4 +20,25 @@ const questionSchema = new mongoose.Schema({
     }
 });
 
+const answerSchema = new mongoose.Schema({
+    questionId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Question',
+        required: true
+    },
+    text: {
+        type: String,
+        required: true
+    },
+    likedByElder: {
+        type: Boolean,
+        default: null
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
+});
+
 export const Question = mongoose.model('Question', questionSchema);
+export const Answer = mongoose.model('Answer', answerSchema);

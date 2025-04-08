@@ -1,9 +1,12 @@
-const express = require('express');
+import express from 'express';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { Question, Answer } from '../../database/models.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const router = express.Router();
-const fs = require('fs');
-const path = require('path');
-const Question = require('../../database/models').Question;
-const Answer = require('../../database/models').Answer;
 
 router.post('/evaluate', async (req, res) => {
   try {
@@ -52,4 +55,4 @@ router.post('/evaluate', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

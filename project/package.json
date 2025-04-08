@@ -2,6 +2,7 @@
   "name": "rule-voice-qna",
   "version": "1.0.0",
   "description": "Voice Q&A system for elderly users",
+  "type": "module",
   "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
