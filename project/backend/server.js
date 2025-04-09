@@ -19,9 +19,11 @@ const app = express();
 
 // 미들웨어 설정
 app.use(cors());
+
 app.use(express.json());
 
 // 정적 파일 제공 (프론트엔드)
+
 app.use(express.static(path.join(__dirname, '..', 'frontend')));
 
 // 라우터 연결
@@ -36,7 +38,7 @@ mongoose.connect(process.env.MONGODB_URI, {
   useUnifiedTopology: true
 })
 .then(() => {
-  console.log('MongoDB connected');
+  console.log('MongoDB connected 몽고디비 연결됨됨');
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });
